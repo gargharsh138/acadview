@@ -1,11 +1,11 @@
 #import statements
-from spydetails import name,salutation,age,rating
+from spydetails import spy
 from startchat import startchat
 
 print "Welcome to Spy Chat. It's good to have you"
-question = raw_input("Would you like to continue as "+salutation+""+name+" (Y/N): ")    #default user or new user
+question = raw_input("Would you like to continue as "+spy["salutation"]+""+spy["name"]+" (Y/N): ")    #default user or new user
 if question == "y" or question == "Y":
-    startchat(name,age,rating)
+    startchat(spy["name"],spy["age"],spy["rating"])
 
 elif question == "N" or question == "n":
     name=raw_input("Please enter your name: ")                          #variable for spy name
@@ -34,7 +34,7 @@ elif question == "N" or question == "n":
 
             else :
                 print "Work hard!!!"
-            status = True
+
             print "Thanks for all the info,here are your details: "
             print "Name: %s |Age: %s |Rating: %s "%(name,str(age),str(rating))  #final details of spy
             startchat(name, age, rating)
